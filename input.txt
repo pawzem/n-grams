@@ -1,0 +1,360 @@
+
+Gdyby kazdy, kto to czyta, przekazal 10 zl, Wikipedia moglaby rozwijac sie przez najblizsze lata.
+
+Przekaz darowizne
+padlockAlgorytm
+Przejdz do nawigacjiPrzejdz do wyszukiwania
+Algorytm – skonczony ciag jasno zdefiniowanych czynnosci koniecznych do wykonania pewnego rodzaju zadan, sposób postepowania prowadzacy do rozwiazania problemu[1].
+
+Slowo „algorytm” pochodzi od lacinskiego slowa algorithmus, oznaczajacego wykonywanie dzialan przy pomocy liczb arabskich (w odróznieniu od abacism – przy pomocy abakusa), które z kolei wzielo sie od nazwy „Algoritmi”, zlatynizowanej wersji nazwiska „al-Chwarizmi” Abu Abdullaha Muhammada ibn Musy al-Chuwarizmiego, matematyka perskiego z IX wieku[2].
+
+Zadaniem algorytmu jest przeprowadzenie systemu z pewnego stanu poczatkowego do pozadanego stanu koncowego. Badaniem algorytmów zajmuje sie algorytmika. Algorytm moze zostac zaimplementowany w postaci programu komputerowego.
+
+Jako przyklad stosowanego w zyciu codziennym algorytmu podaje sie czesto przepis kulinarny. Dla przykladu, aby ugotowac bigos, nalezy w okreslonej kolejnosci oraz odstepach czasowych (imperatyw czasowy) dodawac wlasciwe rodzaje kapusty] i innych skladników. Moze istniec kilka róznych przepisów dajacych na koncu bardzo podobna potrawe. Przyklad ten ma wylacznie charakter pogladowy, poniewaz jezyk przepisów kulinarnych nie zostal jasno zdefiniowany. Algorytmy zwykle formulowane sa w sposób scisly w oparciu o jezyk matematyki.
+
+W niektórych krajach (miedzy innymi Stanach Zjednoczonych) algorytmy moga zostac opatentowane, jezeli zostana zaimplementowane w jakims praktycznym celu. Przeciwnicy tego podejscia twierdza, ze patentowanie algorytmów spowalnia rozwój informatyki, bo jeden producent moze uzyskac monopol na pisanie oprogramowania tworzacego pewne typy plików (jak bylo to w przypadku GIF). Wiele koncernów komputerowych prowadzi miedzy soba spory prawne dotyczace praw wlasnosci do niektórych patentów. Kontrargumentem zwolenników patentów na oprogramowanie jest prawo wlasnosci intelektualnej (która jest na przyklad utwór muzyczny, bedacy wytworem intelektu i pracy muzyka), zakladajace, ze program jest intelektualna wlasnoscia twórcy.
+
+
+Spis tresci
+1	Definicja klasyczna
+1.1	Przyklad
+1.2	Inne przyklady
+2	Klasyfikacja algorytmów
+2.1	Algorytmy równolegle
+2.2	Algorytmy sztucznej inteligencji
+2.3	Algorytmy genetyczne
+2.4	Algorytmy kwantowe
+3	Ograniczenia algorytmów
+4	Implementacja algorytmów
+4.1	Algorytmy komputerowe
+4.2	Algorytmy poza komputerami
+4.3	Algorytm a opisujacy go jezyk
+4.4	Bledy w implementacji
+5	Historia algorytmów
+5.1	Poczatki
+5.2	Rozwój maszyn liczacych
+5.3	Komputery
+6	Zobacz tez
+7	Przypisy
+8	Bibliografia
+9	Linki zewnetrzne
+Definicja klasyczna
+Algorytm – jednoznaczny przepis obliczenia w skonczonym czasie pewnych danych wejsciowych do pewnych danych wynikowych.
+
+Zazwyczaj przy analizowaniu badz projektowaniu algorytmu zaklada sie, ze dostarczane dane wejsciowe sa poprawne, czasem istotna czescia algorytmu jest nie tylko przetwarzanie, ale i weryfikacja danych.
+
+Zgodnie z zalozeniem o jednoznacznosci – dla identycznego zestawu danych poczatkowych, algorytm zdefiniowany klasycznie zawsze zwróci identyczny wynik.
+
+Przyklad
+Znalezienie najwiekszej wsród niepustej, nieposortowanej listy przypadkowych liczb mozna przeprowadzic na wiele sposobów; jednym z najszybszych jest przedstawiony ponizej. Niech indeks wskazuje aktualnie badany element listy (jesli jest ona numerowana, moze on oznaczac np. jej numer), a maksimum oznacza najwieksza dotychczas znaleziona wartosc.
+
+Niech indeks wskazuje na pierwszy element (poczatek) listy.
+Niech maksimum zawiera wartosc elementu listy wskazywanego przez indeks (tzn. pierwszego).
+Jezeli zawartosc elementu listy wskazywanego przez indeks jest wieksza od zawartosci maksimum, to przypisz maksimum wartosc elementu wskazywanego przez indeks.
+Niech indeks wskazuje kolejny element listy; jesli to niemozliwe (tzn. indeks wskazuje ostatni element listy, czyli jej koniec), przejdz do punktu 6.
+Wróc do punktu 3.
+Koniec.
+Wykonanie tego algorytmu spowoduje, ze najwieksza liczba na wspomnianej liscie bedzie wartoscia maksimum. Dodatkowym atutem jest fakt, iz algorytm ten dziala dla list dowolnej dlugosci, poniewaz nie wykorzystuje on liczby elementów listy, lecz tylko tzw. operacje nastepnika elementu danej listy, tzn. przejscia do nastepnego jej elementu. Niemoznosc wskazania kolejnego elementu jest wtedy równowazna temu, iz dany element jest ostatni na liscie.
+
+Inne przyklady
+algorytm Euklidesa
+algorytm Fermata
+algorytm Luhna
+algorytm mrówkowy
+algorytmy kompresji
+algorytmy kryptograficzne
+algorytmy przeszukiwania drzew: min-max i alpha-beta
+algorytmy sortowania
+algorytm unifikacji
+Klasyfikacja algorytmów
+Istnieje wiele róznych sposobów podzialu algorytmów na grupy, jednak problem ten wzbudza kontrowersje.
+
+Podstawowe paradygmaty tworzenia algorytmów komputerowych:
+
+dziel i zwyciezaj – dzielimy problem na kilka mniejszych, a te znowu dzielimy, az ich rozwiazania stana sie oczywiste
+programowanie dynamiczne – problem dzielony jest na kilka, waznosc kazdego z nich jest oceniana i po pewnym wnioskowaniu wyniki analizy niektórych prostszych zagadnien wykorzystuje sie do rozwiazania glównego problemu
+metoda zachlanna – nie analizujemy podproblemów dokladnie, tylko wybieramy najbardziej obiecujaca w danym momencie droge rozwiazania
+programowanie liniowe – oceniamy rozwiazanie problemu przez pewna funkcje jakosci i szukamy jej minimum
+wyszukiwanie wyczerpujace – przeszukujemy zbiór danych, az do odnalezienia rozwiazania
+heurystyka – czlowiek na podstawie swojego doswiadczenia tworzy algorytm, który dziala w najbardziej prawdopodobnych warunkach; rozwiazanie zawsze jest przyblizone.
+Najwazniejsze techniki implementacji algorytmów komputerowych to:
+
+proceduralnosc – algorytm dzieli sie na szereg podstawowych procedur. Wiele algorytmów ma wspólne biblioteki standardowych procedur, z których sa one wywolywane w razie potrzeby.
+praca sekwencyjna – wykonywanie poszczególnych procedur algorytmu, wedlug kolejnosci ich wywolan; naraz pracuje tylko jedna procedura
+praca wielowatkowa – procedury wykonywane sa sekwencyjnie, lecz kolejnosc ich wykonania jest trudna do przewidzenia dla programisty
+praca równolegla – wiele procedur wykonywanych jest w tym samym czasie, wymieniaja sie one danymi
+rekurencja – procedura lub funkcja wywoluje sama siebie, az do uzyskania wyniku lub bledu
+obiektowosc – procedury i dane laczy sie w pewne klasy reprezentujace najwazniejsze elementy algorytmu oraz stan wewnetrzny wykonujacego je systemu
+algorytm probabilistyczny – dziala poprawnie z bardzo wysokim prawdopodobienstwem, ale wynik nie jest pewny.
+Algorytmy równolegle
+Jednym ze sposobów rozwiazywania zlozonych problemów jest zastosowanie algorytmów równoleglych. Oznacza to, ze program nie jest wykonywany tylko jeden raz na jednym procesorze, ale wielokrotnie równolegle na wielu róznych maszynach. Podejscie takie jest stosowane od lat w superkomputerach, jednak w takiej realizacji jest ono bardzo kosztowne. Nowym pomyslem jest tutaj zastosowanie sieci zwyklych komputerów tworzacych klaster. Cale zadanie jest wtedy rozdzielane na wiele maszyn i obliczane równolegle przy pomocy tysiecy procesorów. Czasami taka potezna siec rozproszona nazywa sie grid. Przykladem jej zastosowania moze byc program SETI@home, gdzie dane z nasluchu kosmosu analizuja dziesiatki tysiecy komputerów nalezacych do zwyklych uzytkowników. Maszyny sa podlaczone do Internetu, przez który przesylaja wyniki pracy uruchomionych na nich aplikacji. Rozwinieciem tego rozwiazania jest projekt parasolowy BOINC@home, który obejmuje kilkadziesiat tego typu projektów co SETI@home, zajmujacych sie zagadnieniami z wielu dziedzin nauki, nie tylko scislych.
+
+Obecnie algorytmy równolegle moga byc wykorzystywane na zwyklych domowych komputerach, poniewaz ogromna wiekszosc z nich posiada procesory wielordzeniowe, które w uproszczeniu sa polaczeniem kilku procesorów w jeden. Po roku 2010 rozpowszechnilo sie nowe podejscie do obliczen równoleglych polegajace na wykorzystywaniu w tym celu kart graficznych; nosi ono nazwe GPGPU. Kilka projektów z BOINC@home oraz projekt z zakresu biologii molekularnej Folding@home pozwala na zastosowanie karty graficznej, a nawet kilku zamontowanych w jednym komputerze, do realizacji obliczen rozproszonych. Umozliwia to wykorzystanie ogromnej liczby (do kilku tysiecy) procesorów karty graficznej dzialajacych równolegle.
+
+Nowym pomyslem na implementacje algorytmów równoleglych jest wykorzystanie do tego celu DNA. W jednej kropli wody znajduja sie miliony czastek tego kwasu. Jezeli zsyntetyzujemy je tak, aby wykonywaly pewien algorytm, to w ulamku sekundy potrzebnym na reakcje chemiczne komputer oparty na DNA znajdzie rozwiazanie bardzo zlozonego problemu. Przykladem sa tutaj bakterie, które zaprogramowano, aby rytmicznie emitowaly swiatlo. Dziedzina nauki zajmujaca sie algorytmami w polaczeniu z biologia jest bioinformatyka.
+
+Algorytmy sztucznej inteligencji
+Wiele problemów zwiazanych z codziennym zyciem to problemy NP-trudne. Przykladami ich moga byc znajdowanie najkrótszej trasy laczacej pewna liczbe miast lub optymalne pakowanie plecaka. Oznacza to, ze algorytmy moga radzic sobie z takimi problemami tylko w przyblizeniu lub w bardzo szczególnej sytuacji. Sterowany algorytmem niedeterministycznym (przyblizonym) robot nie potrafi odnalezc najkrótszej drogi w bardzo zlozonym srodowisku, mimo ze dla czlowieka moze byc ona oczywista.
+
+Inzynierowie próbuja rozwiazywac problemy NP-trudne przez nasladowanie zywych organizmów. Jezeli nie udaje sie sformulowac jasnego algorytmu rozwiazujacego dany problem, mozna maszyne wyposazyc w zdolnosc do samodzielnego uczenia sie. Zagadnieniem tym zajmuje sie dzial okreslany jako sztuczna inteligencja. Tego podejscia nie nalezy mylic z ludzka inteligencja. Maszyny nasladuja tylko pewne cechy istot zywych, ale na razie nie sa w stanie im dorównac na wielu polach.
+
+Algorytmy genetyczne
+ Osobny artykul: Algorytm genetyczny.
+Jest to cala grupa algorytmów sluzaca do poszukiwania najlepszych rozwiazan danego problemu. Zasada ich dzialania opiera sie na obserwacji praw natury i przeniesieniu ich na grunt matematyki i informatyki. U podstaw algorytmów genetycznych znajduje sie dobór naturalny oraz dziedzicznosc. Najlepiej przystosowane jednostki (niosace rozwiazania zblizone do wlasciwego) sa powielane oraz krzyzowane ze soba w celu powielenia informacji. Bardzo wiele rzeczywistych problemów mozna rozwiazac w ten sposób.
+
+Algorytmy kwantowe
+ Osobny artykul: Algorytm kwantowy.
+Niektóre algorytmy szyfrowania (np. RSA) opieraja sie na trudnosci rozkladu liczby na czynniki pierwsze (faktoryzacja). Dla tego problemu nie jest znany algorytm wielomianowy, którego mozna by uzyc na klasycznym komputerze, czyli opartym o elementy pólprzewodnikowe. Natomiast algorytmy zaimplementowane na komputerach kwantowych, w odróznieniu od komputerów elektronicznych opartych na bitach, moga poslugiwac sie qubitami oraz zjawiskiem splatania. Na tego typu komputerach mozliwy jest rozklad liczby na czynniki pierwsze w czasie wielomianowym np. za pomoca algorytmu Shora.
+
+Nalezy jednak miec na uwadze, ze duzym problemem komputerów kwantowych jest dekoherencja ich stanów – w ten sposób bardzo latwo moze dojsc do utraty danych. Rozwiazaniem moze byc tutaj wykorzystanie splatania do teleportacji stanu kwantowego na kolejne czastki elementarne. W zwiazku z tym wielu naukowców pracuje juz dzis nad implementacja algorytmów kryptografii kwantowej. Przykladem tego jest szyfrowanie danych z wykorzystaniem splatanych fotonów. Obecnie kierunki prac nad komputerami kwantowymi to:
+
+fotonika – komputery oparte na fotonach,
+spinotronika – komputery operujace spinem elektronów zamiast napieciem.
+Ograniczenia algorytmów
+Prawidlowy algorytm komputerowy musi kiedys zakonczyc swoja prace. Oznacza to, ze problem musi byc rozwiazany z wykorzystaniem dostepnych zasobów obliczeniowych, w skonczonym czasie. Jezeli czas obliczen algorytmu, dla coraz wiekszego zbioru danych, rosnie szybciej niz dowolna funkcja wielomianowa, to mówi sie, ze nie jest praktycznie obliczalny. Jedna z klas problemów, dla których nie znamy wielomianowych rozwiazan, sa problemy NP-trudne. Jesli znamy wielomianowy algorytm weryfikujacy poprawnosc rozwiazania problemu NP-trudnego, to problem ten nazywamy NP-zupelnym. Pytanie, czy P=NP, czyli czy istnieja szybkie algorytmy rozwiazujace problemy NP-zupelne, jest jednym z najbardziej palacych pytan we wspólczesnej informatyce. Ponadto istnieja problemy nierozwiazywalne za pomoca zadnego algorytmu.
+
+Implementacja algorytmów
+Algorytmy komputerowe
+Komputery przetwarzaja przekazywane im informacje z wykorzystaniem algorytmów. Program jest algorytmem zapisanym w jezyku zrozumialym dla maszyny (kodzie maszynowym). Kazdy poprawny kod maszynowy da sie przelozyc na zestaw instrukcji dla teoretycznego modelu komputera – maszyny Turinga.
+
+Zwykle algorytmy pracuja na danych wejsciowych i uzyskuja z nich dane wyjsciowe. Informacje zapisane w pamieci maszyny traktuje sie jako jej stan wewnetrzny. Niektóre algorytmy maja za zadanie wylacznie przeprowadzanie komputera z jednego stanu wewnetrznego do innego.
+
+Kazdy algorytm komputerowy musi byc wprowadzony do komputera w bardzo rygorystycznie zdefiniowanym jezyku. Ludzie czesto komunikujac sie, przesylaja miedzy soba informacje wieloznaczne. Komputery moga reagowac tylko na calkowicie jednoznaczne instrukcje. Jezeli dany algorytm da sie wykonac na maszynie o dostepnej mocy obliczeniowej i pamieci oraz w akceptowalnym czasie, to mówi sie, ze jest obliczalny.
+
+Poprawne dzialanie wiekszosci algorytmów implementowanych w komputerach opiera sie na kolejnej realizacji pewnego zestawu warunków. Jezeli którys z nich nie zostanie spelniony, to program konczy sie komunikatem o bledzie. Czasami podczas implementacji algorytmu nawet istotny warunek moze zostac pominiety. Przykladowo, w programie dzielacym przez siebie dwie liczby uzytkownik poleca wykonac dzielenie przez zero. Dzialanie aplikacji, która nie sprawdzi warunku „czy dzielnik nierówny zero”, zostanie przerwane przez system operacyjny komputera.
+
+Algorytmy poza komputerami
+Implementacja algorytmu w ogólnosci oznacza wystepowanie pewnego podobienstwa algorytmu opisanego w ludzkim jezyku do fizycznego zjawiska lub procesu. Czasami algorytm moze byc podstawa budowanego przez ludzi urzadzenia, jak np. komputer. Jednak o implementacji mozemy mówic równiez wtedy, kiedy pewien system zachowuje sie podobnie do algorytmu. Dla przykladu mózg ptaka implementuje arytmetyke w postaci sieci neuronowej, dzieki temu zwierze jest w stanie porównywac pewne odstepy czasu. W przypadku maszyn algorytm moze zostac zaimplementowany jako pewna siec polaczen elektrycznych, pneumatycznych badz mechanicznych. Przykladem moze byc tutaj analogowy regulator obrotów z pierwszych silników parowych, realizujacy algorytm P (proporcjonalny). Przy takim podejsciu sukces nie oznacza zatrzymania sie algorytmu, lecz utrzymywanie pewnego stanu systemu. Mozemy np. powiedziec, ze algorytm utrzymywania zycia dziala poprawnie, az do smierci organizmu. Poprawny algorytm ma utrzymywac pewne parametry zywej istoty (np. temperature) w optymalnym zakresie.
+
+Algorytm a opisujacy go jezyk
+Nalezy zdawac sobie sprawe z róznicy miedzy algorytmem, bedacym niezaleznym od jego implementacji przepisem, a programem, który moze zostac zinterpretowany i wykonany przez komputer. Ponizsze fragmenty programów sa realizacja tego samego algorytmu sumujacego trzy trójki:
+
+Dodawanie w jezyku C:
+
+  wynik  = 3;
+  wynik += 3;
+  wynik += 3;
+Ten sam jezyk, ale z zastosowaniem petli:
+
+  wynik = 0;
+  for (int i = 0; i < 3; ++i) wynik += 3;
+Jezyk C, zapis proceduralny z zastosowaniem rekurencji:
+
+  int alg(int n) {
+    if(n == 3)
+      return 0;
+    else
+      return 3 + alg(n + 1);
+  }
+
+  void main() {
+    int wynik = alg(0);
+  }
+Asembler x86:
+
+   mov eax, 0                   # zeruje akumulator
+   add eax, 3                   # dodaje 3 do akumulatora
+   add eax, 3
+   add eax, 3
+   mov 0EF21A29Ch, eax          # kopiuje zawartosc akumulatora do komórki pamieci
+Powyzsze programy napisane sa w róznych jezykach programowania, uzywajacych róznych poziomów abstrakcji, przy czym zapis w asemblerze jest na najnizszym poziomie abstrakcji, to znaczy jest najblizej „prawdziwego”, wykonywanego bezposrednio przez procesor komputera, kodu.
+
+Bledy w implementacji
+Wciaz rozwijana inzynieria oprogramowania pozwala na tworzenie aplikacji, których kod zródlowy ma setki tysiecy linii, przy równoczesnym zachowaniu kontroli nad caloscia projektu, co pozwala zminimalizowac ilosc bledów podczas implementacji algorytmów.
+
+Historia algorytmów
+Poczatki
+Slowo algorytm pochodzi od nazwiska arabskiego matematyka z IX wieku, Muhammada ibn Musa al-Chuwarizmiego. Poczatkowo slowem algorism nazywano czynnosci konieczne do wykonywania obliczen z uzyciem dziesietnego systemu liczbowego. Obecne znaczenie slowa algorytm, jako zestawu scislych regul, powstalo wraz z rozwojem matematyki i techniki. Wynalezienie zbiorów zasad pozwalajacych na obliczanie parametrów konstruowanych maszyn, stalo sie podstawa rewolucji przemyslowej zapoczatkowanej w koncu XVIII stulecia. Jednak dopiero zbudowanie maszyn, które same mogly realizowac pewne proste algorytmy, stalo sie przelomem. Poczatkowo mialy one postac ukladów mechanicznych mogacych realizowac proste obliczenia.
+
+Ogromnego postepu dokonal w tej dziedzinie w 1842 roku Charles Babbage, który na podstawie swoich doswiadczen sformulowal idee maszyny analitycznej zdolnej do realizacji zlozonych algorytmów matematycznych. W pracy Babbage wspierala Ada Lovelace, która przetlumaczyla dla niego prace wloskiego matematyka dotyczace algorytmu obliczania liczb Bernoullego. Prace Lovelace dotyczace implementacji tego algorytmu na maszyne róznicowa zawieraly opis swoistego jezyka programowania. Niestety, Babbage nigdy nie zbudowal swojego mechanicznego komputera. Programy napisane przez Lovelace zostaly przetestowane na modelu maszyny róznicowej wykonanym w XX wieku i okazaly sie poprawne.
+
+Rozwój maszyn liczacych
+Wraz z wynalezieniem pod koniec XIX wieku kart perforowanych elektro-mechaniczne maszyny osiagnely zdolnosc realizacji algorytmów przetwarzajacych ogromne zbiory danych. Karty perforowane staly sie wejsciem, z którego dane przetwarzaly proste algorytmy sumujace, a jako wyjscie sluzyly odpowiednie zegary. Ogromny postep w tej dziedzinie zawdzieczamy firmie bedacej protoplasta IBM, która zbudowala tego typu urzadzenia, aby zrealizowac spis ludnosci w Stanach Zjednoczonych.
+
+W XX wieku postep elektroniki pozwolil na budowe maszyn analogowych potrafiacych w swoim wnetrzu odtwarzac pewne algorytmy matematyczne. Mogly one dokonywac operacji arytmetycznych oraz rózniczkowac i calkowac.
+
+Komputery
+Zanim zbudowano pierwsze komputery, istnialy juz solidne podstawy informatyki teoretycznej. Algorytm wyrazony w najprostszym z mozliwych jezyków okazal sie dla urzadzen najlepszy. Na poczatku lat 30. XX wieku pojawilo sie kilka niezaleznie opracowanych matematycznych modeli wykonywania algorytmów. Najslynniejszym zostala maszyna Turinga zaproponowana w pracy On Computable Numbers autorstwa Alana Turinga, brytyjskiego matematyka uznawanego za ojca informatyki. Jednoczesnie okazalo sie, ze wszystkie modele sa sobie równowazne, tj. kazdym z nich mozna wyrazic dowolny algorytm oraz zasymulowac dzialanie jednego modelu na innym (patrz: kompletnosc Turinga). Okazalo sie, ze nawet najbardziej zlozone algorytmy mozna wyrazic za pomoca prostego matematycznego opisu i kilku elementarnych operacji. Maszyna Turinga miala skladac sie z glowicy czytajaco-piszacej przesuwajacej sie po nieskonczonej tasmie. W kazdym kroku mogla zmienic wartosc danej komórki tasmy, przesunac sie w lewo lub prawo oraz zmienic swój stan.
+
+Pierwszy mechaniczny komputer zdolny, jak sie pózniej okazalo, do wykonywania wszystkich algorytmów, powstal juz w 1936 roku w Niemczech. Nazywal sie Z1, a jego twórca byl niemiecki inzynier Konrad Zuse, który zaprojektowal swoja maszyne zupelnie niezaleznie od prac brytyjskich i angielskich matematyków. Z powodu ogromnej zawodnosci w 1941 roku ukonczyl jej kopie bazujaca na ukladach przekaznikowych, czyli Z3, która znalazla zastosowanie przy projektowaniu skrzydel samolotów. Z3 mial wiele cech wspólczesnego komputera; wszystkie liczby reprezentowane byly w systemie binarnym, programy wprowadzano na kartach perforowanych, a do wprowadzania danych sluzyla klawiatura. W Wielkiej Brytanii oraz Stanach Zjednoczonych pierwsze komputery, zbudowane na poczatku lat 40, mialy scisle okreslone zadanie lamania niemieckich szyfrów oraz wykonywania obliczen na potrzeby wojska. Dopiero w 1944 roku skonstruowano tam programowalna maszyne zdolna do wykonywania dowolnych algorytmów, ENIAC. Pracowala ona w systemie dziesietnym, a programowania dokonywano poprzez przelaczanie odpowiednich kabli.
+
+W ostatnich trzydziestu latach, dzieki upowszechnieniu komputerów osobistych, informatyka stala sie bardzo wazna galezia gospodarki. Na swiecie pracuja miliony programistów, zajmujacych sie tworzeniem oraz doskonaleniem oprogramowania lub poszukiwaniem nowych, efektywniejszych algorytmów. Wraz z oparciem na komputerach funkcjonowania calego spoleczenstwa coraz wieksza wage przyklada sie do wyszukiwania bledów w implementacjach lub zalozeniach algorytmów, co jest procesem trudno poddajacym sie automatyzacji i wymagajacym zmudnej pracy calych zespolów programistów i hakerów.
+
+Zobacz tez
+dowód poprawnosci algorytmu
+struktura danych
+Przypisy
+ Haslo algorytm, encyklopedia PWN.
+ Knuth 2002 ?, s. 1.
+Bibliografia
+Neil Gershenfeld i Isaac L. Chuang, „Molekularne komputery kwantowe”; Swiat Nauki, sierpien 1998
+Nadrian C. Seeman, „Na granicy zycia i nanotechnologii”; Swiat Nauki, lipiec 2004 Dymek
+Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein „Wprowadzenie do algorytmów (nowe wydanie)”; WNT, wyd. VI, 2004
+Donald E. Knuth: Sztuka programowania. Grzegorz Jakacki (tlum.). T. 1. Warszawa: Wydawnictwa Naukowo-Techniczne, 2002. ISBN 83-204-2540-9. OCLC 749477969.
+L. Banachowski, K. Diks, W. Rytter „Algorytmy i struktury danych”; WNT, wyd. V, 2006
+Linki zewnetrzne
+	Zobacz haslo algorytm w Wikislowniku
+	W Wikimedia Commons znajduja sie multimedia zwiazane z tematem:
+Algorytm
+Algorytmy i struktury danych
+Kody zródlowe wielu algorytmów w C (ang.)
+Inna strona z kodami zródlowymi (ang.)
+Slownik algorytmów i struktur danych (ang.)
+Algorytmy numeryczne (ang.)
+Kontrola autorytatywna (procedure):LCCN:?sh85003487GND:?4001183-5NDL:?00560337BnF:?119358199BNCF:?21026BNE:?XX527980WorldCat
+Kategoria: Algorytmy
+Menu nawigacyjne
+Nie jestes zalogowanyDyskusjaEdycjeUtwórz kontoZaloguj sieArtykulDyskusjaCzytajTekst zródlowyHistoria i autorzySzukaj
+Przeszukaj Wikipedie
+Strona glówna
+Losuj artykul
+Kategorie artykulów
+Najlepsze artykuly
+Czeste pytania (FAQ)
+Dla czytelników
+O Wikipedii
+Zglos blad
+Kontakt
+Wspomóz Wikipedie
+Dla wikipedystów
+Pierwsze kroki
+Portal wikipedystów
+Ogloszenia
+Zasady
+Pomoc
+Ostatnie zmiany
+Narzedzia
+Linkujace
+Zmiany w linkowanych
+Przeslij plik
+Strony specjalne
+Link do tej wersji
+Informacje o tej stronie
+Element Wikidanych
+Cytowanie tego artykulu
+Drukuj lub eksportuj
+Utwórz ksiazke
+Pobierz jako PDF
+Wersja do druku
+W innych projektach
+Wikimedia Commons
+
+W innych jezykach
+Afrikaans
+Alemannisch
+????
+???????
+Aragonés
+???????
+Asturianu
+Az?rbaycanca
+??????
+?????
+Bân-lâm-gú
+?????????
+??????????
+?????????? (???????????)?
+?????????
+Bosanski
+Català
+Ceština
+Cymraeg
+Dansk
+Deutsch
+Eesti
+????????
+English
+Español
+Esperanto
+Euskara
+?????
+Føroyskt
+Français
+Gaeilge
+Galego
+Gikuyu
+???
+???????
+??????
+Hrvatski
+Ido
+Ilokano
+Bahasa Indonesia
+Interlingua
+Íslenska
+Italiano
+?????
+???????
+???????
+Kiswahili
+Kurdî
+????????
+???
+Latina
+Latviešu
+Lëtzebuergesch
+Lietuviu
+Lingua Franca Nova
+Lumbaart
+Magyar
+??????????
+??????
+?????
+????
+Bahasa Melayu
+Mirandés
+??????
+??????????
+Nederlands
+??????
+????? ????
+???
+Nordfriisk
+Norsk
+Norsk nynorsk
+Occitan
+???? ?????
+Oromoo
+O?zbekcha/???????
+??????
+??????
+Português
+Qaraqalpaqsha
+Româna
+??????????
+???????
+???? ????
+Scots
+Shqip
+Sicilianu
+?????
+Simple English
+Slovencina
+Slovenšcina
+?????
+?????? / srpski
+Srpskohrvatski / ??????????????
+Basa Sunda
+Suomi
+Svenska
+Tagalog
+?????
+???????/tatarça
+??????
+???
+??????
+Türkçe
+??????????
+????
+Ti?ng Vi?t
+Walon
+Winaray
+??
+??????
+??
+Zazaki
+??
+Edytuj linki
+Te strone ostatnio edytowano 3 gru 2018, 12:06.
+Tekst udostepniany na licencji Creative Commons: uznanie autorstwa, na tych samych warunkach, z mozliwoscia obowiazywania dodatkowych ograniczen. Zobacz szczególowe informacje o warunkach korzystania.
+Polityka ochrony prywatnosciO WikipediiKorzystasz z Wikipedii tylko na wlasna odpowiedzialnoscDla deweloperówKomunikat na temat ciasteczekWersja mobilnaWikimedia Foundation Powered by MediaWiki
