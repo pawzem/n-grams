@@ -23,6 +23,9 @@ media
 # C extensions
 *.so
 
+# input
+books/
+
 # Distribution / packaging
 .Python
 build/
