@@ -1,7 +1,7 @@
 # n-grams
 project which will find digrams and trigrams of given text 
 
-run:
+run model creation:
 ngrams.py language_name input.txt output.json
 
 inputs for models"
@@ -11,3 +11,7 @@ cz- https://manybooks.net/titles/zapisky-z-mrtveho-domu?ga_submit=lrf:wYPn083k0j
 hun- https://manybooks.net/titles/petofi-sandor-osszes-koltemenyei
 
 requires nltk.download('punkt')
+
+
+run analisys:
+ngrams.py analise model_location.json analise_input/text_input.txt

@@ -69,14 +69,14 @@ def ngrams_analysis(lines):
     trigrams = nltk.trigrams(tokens)
     bigrams = nltk.bigrams(tokens)
 
-    digrams = analize(bigrams, len(text))
-    trigrams = analize(trigrams, len(text))
-    characters = analize_characters(text)
+    digrams = analise(bigrams, len(text))
+    trigrams = analise(trigrams, len(text))
+    characters = analise_characters(text)
 
     return {'digrams': digrams, 'trigrams': trigrams, 'characters': characters}
 
 
-def analize_characters(text):
+def analise_characters(text):
     result = {}
     counts = Counter(text)
     for character, count in counts.items():
@@ -84,7 +84,7 @@ def analize_characters(text):
     return result
 
 
-def analize(ngrams, length):
+def analise(ngrams, length):
     result = {}
     dist = nltk.FreqDist(ngrams)
     for ngram, count in dist.items():
